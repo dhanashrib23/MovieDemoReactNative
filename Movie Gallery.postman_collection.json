@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "1c8d2448-a8ca-402d-b7d8-cffdbfd45f0f",
+		"name": "Movie Gallery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14138437"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"shreyas@gmail.com\", \r\n    \"password\": \"sj\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4444/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Shreyas\", \r\n    \"email\": \"shreyas@gmail.com\", \r\n    \"password\": \"sj\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4444/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "fetch all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/movie/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"movie",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch movie by its id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/movie/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch movie by genre id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/movie/genre/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"movie",
+								"genre",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search movies by name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The Dark Knight\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4444/movie/search?title=Knight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"movie",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Knight"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genres",
+			"item": [
+				{
+					"name": "fetch all active genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/genre/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"genre",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
